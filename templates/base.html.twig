@@ -4,22 +4,22 @@
 	<meta charset="UTF-8">
     <meta name='viewport' content='width=device-width, initial-scale=1, shrink-to-fit=no'> 	
 	<title>{% block title %}SODOMANIA{% endblock %}</title>
-	<link rel="stylesheet" type="text/css" href="/../public/css/style.css">
+	<link rel="stylesheet" type="text/css" href="{{ app.path }}/css/style.css">
 </head>
 <body>
 	<div class="wrapper">
-		<header><img src="/../public/images/interface/head.jpg"></header>
+		<header><img src="{{ app.path }}/images/interface/head.jpg"></header>
 		<nav>
 			<ul>
 				<li class="logo">
-					<img src="/../public/images/interface/logo.png">
+					<img src="{{ app.path }}/images/interface/logo.png">
 					<div class="nav-toggle">
 						<i class="fa fa-bars color-white" aria-hidden="true"></i>
 					</div>
 				</li>
 				<li><a href="{{ path('content_list') }}">КОНТЕНТ</a></li>
 				<li><a href="{{ path('guestbook') }}">ГОСТЕВАЯ</a></li>
-				<li><a href="{{ path('vote_list') }}"">ОПРОСЫ</a></li>
+				<li><a href="{{ path('vote_list') }}">ОПРОСЫ</a></li>
 				<li><a href="#">ДРУГОЕ</a></li>
 				<li><a href="#">ДРУГОЕ</a></li>
 				<li><a href="#">ДРУГОЕ</a></li>
@@ -45,7 +45,7 @@
 		</section>
 		<footer>{{ 'now'|date('Y') }} myBASE</footer>
 	</div>
-	<script type="text/javascript" src="../public/js/jquery.min.js"></script>
-	<script type="text/javascript" src="../public/js/libs.js"></script>
+	<script type="text/javascript" src="{{ app.path }}/js/jquery.min.js"></script>
+	<script type="text/javascript" src="{{ app.path }}/js/libs.js"></script>
 </body>
 </html>
